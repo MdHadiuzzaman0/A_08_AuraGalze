@@ -45,15 +45,19 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {isPending ? <span className="loading loading-dots loading-md"></span> : user ?
                         <>
-                        <div className="flex items-center gap-1">
-                            <h3>{user?.name}</h3>
-                            <Image
-                                src={user?.image} alt=""
-                                width={20} height={20}
-                                className="w-full rounded-full" />
-                        
-                        <Link href="/login" className="" onClick={async () => await authClient.signOut()}><IoLogOutSharp /></Link>
-                        </div>
+                            <div className="flex items-center gap-1">
+                                <Link href='/myProfile'>
+                                    <div className='flex gap-1'>
+                                        <h3>{user?.name}</h3>
+                                        <Image
+                                            src={user?.image} alt=""
+                                            width={20} height={20}
+                                            className="w-full rounded-full" />
+                                    </div>
+                                </Link>
+
+                                <Link href="/login" className="" onClick={async () => await authClient.signOut()}><IoLogOutSharp /></Link>
+                            </div>
                         </>
                         : <Link href="/login" className="btn">Login</Link>}
 

@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { ToastContainer } from 'react-toastify';
 import MarqueeBanner from "@/components/MarqueeBanner";
 import { getAllTilesData } from "@/lib/data";
@@ -12,6 +13,7 @@ export default async function Layout({ children }) {
             <MarqueeBanner />
             <ToastContainer />
             <main>{children}</main>
+            <Footer/>
         </div>
     );
 }

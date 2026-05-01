@@ -8,11 +8,11 @@ import { IoLogOutSharp } from "react-icons/io5";
 const Navbar = () => {
     const { data: session, isPending } = authClient.useSession()
     const user = session?.user;
-    console.log(session, user)
+    // console.log(session, user)
 
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-base-100 shadow-sm py-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

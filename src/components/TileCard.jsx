@@ -4,7 +4,7 @@ import Link from 'next/link';
 const TileCard = ({tile}) => {
     return (
         <div>
-            <div className="card card-compact bg-base-100 w-full shadow-xl border border-gray-200 overflow-hidden group">
+            <div className="card card-compact bg-base-100 w-full shadow-xl border border-gray-200 overflow-hidden group flex flex-col h-full">
                 {/* ইমেজ সেকশন */}
                 <figure className="relative overflow-hidden h-64">
                     <Image
@@ -20,7 +20,7 @@ const TileCard = ({tile}) => {
                 </figure>
 
                 {/* বডি সেকশন */}
-                <div className="card-body">
+                <div className="flex-1 p-4 flex flex-col">
                     <div className="">
                         <h2 className="card-title text-xl font-bold text-gray-800">{tile.title}</h2>
                     </div>
@@ -42,7 +42,7 @@ const TileCard = ({tile}) => {
                     </div>
 
                     {/* অ্যাকশন বাটন */}
-                    <Link href={`/allTiles/${tile.id}`} className="card-actions justify-end mt-4">
+                    <Link href={`/allTiles/${tile.id}`} className="card-actions justify-end pt-4 mt-auto">
                         <button className="btn btn-primary btn-block group-hover:shadow-lg transition-all">
                             View Details
                         </button>

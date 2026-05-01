@@ -1,8 +1,15 @@
+"use client";
 import Link from 'next/link';
 import Navlink from './Navlink';
 import Image from 'next/image';
+import { authClient } from "@/lib/auth-client"
+import { IoLogOutSharp } from "react-icons/io5";
 
 const Navbar = () => {
+    const { data: session, isPending } = authClient.useSession()
+    const user = session?.user;
+    console.log(session, user)
+
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
@@ -21,11 +28,11 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link href="/">
-                    <div className='flex gap-1'>
-                    <Image src="/logo5.png" 
-                    width={500} height={500} alt="" className="w-10 h-7 rounded-lg"/>
-                    <h3 className='text-xl font-bold text-gray-500'>AutoGlaze</h3>
-                    </div>
+                        <div className='flex gap-1'>
+                            <Image src="/logo5.png"
+                                width={500} height={500} alt="AutoGlaze Logo" className="w-10 h-7 rounded-lg" />
+                            <h3 className='text-xl font-bold text-gray-500'>AutoGlaze</h3>
+                        </div>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -36,7 +43,20 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link href="/login" className="btn">Login</Link>
+                    {isPending ? <span className="loading loading-dots loading-md"></span> : user ?
+                        <>
+                        <div className="flex items-center gap-1">
+                            <h3>{user?.name}</h3>
+                            <Image
+                                src={user?.image} alt=""
+                                width={20} height={20}
+                                className="w-full rounded-full" />
+                        
+                        <Link href="/login" className="" onClick={async () => await authClient.signOut()}><IoLogOutSharp /></Link>
+                        </div>
+                        </>
+                        : <Link href="/login" className="btn">Login</Link>}
+
                 </div>
             </div>
         </div>

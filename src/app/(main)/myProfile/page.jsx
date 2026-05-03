@@ -21,8 +21,8 @@ const page = async () => {
 
                 <div className="flex flex-col items-center space-y-4">
                     <div className="avatar">
-                        <div className="w-28 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <Image src={user?.image} alt="User Profile" width={50} height={50} />
+                        <div className="w-38 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <Image src={user?.image} alt="User Profile" width={100} height={100} />
                         </div>
                     </div>
 

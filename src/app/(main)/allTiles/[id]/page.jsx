@@ -1,6 +1,8 @@
 import { getSingleTilesData } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
+import { MdArrowRight } from "react-icons/md";
+import 'animate.css';
 
 const AllInfoAboutSingleTile = async ({ params }) => {
     const { id } = await params;
@@ -8,7 +10,7 @@ const AllInfoAboutSingleTile = async ({ params }) => {
     // console.log(id, tile)
     return (
         <div className="container mx-auto p-6 lg:py-12">
-            <div className="flex flex-col lg:flex-row gap-10 bg-base-100 shadow-2xl rounded-3xl overflow-hidden border border-gray-100 p-10">
+            <div className="flex flex-col lg:flex-row gap-10 bg-base-100 shadow-2xl rounded-3xl overflow-hidden border border-gray-100 p-10 animate__animated animate__fadeInUp">
 
                 {/* বাম পাশ: ইমেজ সেকশন */}
                 <div className="lg:w-1/2 relative h-[500px] lg:h-[750px]">
@@ -55,11 +57,14 @@ const AllInfoAboutSingleTile = async ({ params }) => {
                                 {tile.inStock ? "● In Stock" : "● Out of Stock"}
                             </span>
                         </div>
-                        
-                        {/* <div>
-              <span className="text-xs uppercase text-gray-400 font-bold block">Finish</span>
-              <span className="text-gray-800 font-medium">Glazed / Matte</span>
-            </div> */}
+
+                        <div>
+                            <h3 className="text-xs uppercase text-gray-400 font-bold block">Attributes</h3>
+                            <div className="flex flex-row gap-2 text-gray-800 font-medium">
+                                {tile.tags.map((tag, index) => <h3 key={index}><MdArrowRight className="inline-block"/> {tag}</h3>)}
+                            </div>
+                        </div>
+
                     </div>
 
                     <div className="flex gap-4">

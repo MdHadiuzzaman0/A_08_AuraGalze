@@ -28,7 +28,7 @@ const AllTiles = () => {
         </div>
 
         {/* Grid Section: Mobile-এ ১টি, Tablet-এ ২টি এবং Desktop-এ ৩টি কার্ড দেখাবে */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mx-auto mt-8 px-6">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mx-auto mt-8 px-6">
           {tileFound.length === 0 ?
             allTiles.map(tile => <TileCard key={tile.id} tile={tile} />)
             :
@@ -37,11 +37,11 @@ const AllTiles = () => {
         </div>
 
         {/* Button Section: Mobile-এ বড় বাটন আর Desktop-এ ছোট বাটন */}
-        <Link href="/allTiles" className="flex justify-center">
+        {/* <Link href="/allTiles" className="flex justify-center">
           <button className='btn bg-amber-200 hover:bg-amber-300 border-none px-10 py-3 w-full max-w-[300px] md:w-auto mx-auto mt-12 text-lg font-bold mb-20 transition-all'>
             Explore All Tiles
           </button>
-        </Link>
+        </Link> */}
       </div>
 
     </div>

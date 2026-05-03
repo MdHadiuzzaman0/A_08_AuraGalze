@@ -20,7 +20,7 @@ const Navbar = async () => {
             <div className="navbar bg-base-100 shadow-sm py-1">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
@@ -33,15 +33,15 @@ const Navbar = async () => {
                         </ul>
                     </div>
                     <Link href="/">
-                        <div className='flex gap-1'>
+                        <div className='flex gap-1 items-center justify-ceb=nter'>
                             <Image src="/logo_40x28.png"
                                 width={500} height={500} alt="AutoGlaze Logo" className="w-10 h-7 rounded-lg" />
-                            <div className="hidden md:block text-xl font-serif font-light text-gray-600 tracking-widest mb-2">Glaze<span className="text-[#d4a94a] italic">Haus</span>
+                            <div className="hidden md:block text-xl font-serif font-light text-gray-600 tracking-widest ">Glaze<span className="text-[#d4a94a] italic">Grid</span>
                             </div>
                         </div>
                     </Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden md:flex">
                     <ul className="menu menu-horizontal px-1 flex gap-8">
                         <Navlink href="/">Home</Navlink>
                         <Navlink href="/allTiles">All Tiles</Navlink>

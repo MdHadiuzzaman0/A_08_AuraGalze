@@ -4,6 +4,10 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form"
 import { useRouter } from 'next/navigation'
 
+export const metadata = {
+  title: "Update Section",
+}
+
 export default function UpdateProfile() {
     const { register, handleSubmit } = useForm();
     const router = useRouter()
@@ -17,9 +21,10 @@ export default function UpdateProfile() {
             toast.error(error.message)
         }
         else {
-            console.log(data)
-            toast.success("photo and name is updated")
-            router.push('/')
+            // console.log(data)
+            toast.success("Profile updated!")
+            router.refresh()
+            router.push('/myProfile')
         }
     }
 

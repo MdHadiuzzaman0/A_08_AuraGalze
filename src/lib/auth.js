@@ -20,6 +20,15 @@ export const auth = betterAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     },
   },
+  user: {
+    additionalFields: {
+      image: {
+        type: "string",
+        required: false,
+        input: true,       // ← allow client to update this field
+      },
+    },
+  },
   // user: {
   //       changeEmail: {
   //           enabled: true,

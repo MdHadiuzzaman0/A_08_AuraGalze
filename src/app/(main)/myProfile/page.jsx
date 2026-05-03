@@ -5,7 +5,10 @@ import Image from 'next/image';
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers"
 
-
+export const metadata = {
+  title: "My Profile",
+  description: "Premium Tile Collection",
+};
 const page = async () => {
 
     // const { data: session } =  authClient.useSession(); // client side
@@ -15,25 +18,35 @@ const page = async () => {
     const user = session?.user;
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-4">
-            <div className="card w-full max-w-md bg-base-100 shadow-2xl border border-gray-100 p-8">
-                <h2 className="text-3xl font-bold text-center mb-6">My Profile</h2>
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] px-4 py-20">
 
-                <div className="flex flex-col items-center space-y-4">
-                    <div className="avatar">
-                        <div className="w-38 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <Image src={user?.image} alt="User Profile" width={100} height={100} />
+            <div className="card w-full max-w-2xl shadow-2xl border border-amber-400/10 p-12 transition-all duration-500">
+                <h2 className="text-4xl font-serif font-light text-center mb-10 tracking-widest">
+                    My Profile
+                </h2>
+
+                <div className="flex flex-col items-center space-y-8">
+
+                    <div className="">
+
+                        <div className="w-26 h-26 rounded-full">
+                            <Image
+                                src={user?.image}
+                                alt="User Profile"
+                                width={100} height={100}
+                                className="w-full h-full "
+                            />
                         </div>
                     </div>
 
-                    <div className="text-center">
-                        <h3 className="text-xl font-semibold">{user?.name}</h3>
-                        <p className="text-gray-500">{user?.email}</p>
+                    <div className="text-center space-y-2">
+                        <h3 className="text-2xl font-medium  tracking-wide">{user?.name}</h3>
+                        <p className=" font-light tracking-loose">{user?.email}</p>
                     </div>
 
                     <Link
                         href="/myProfile/update"
-                        className="btn btn-neutral w-full mt-4"
+                        className="btn bg-amber-400 hover:bg-amber-500 text-black border-none w-full max-w-xs mt-6 rounded-sm uppercase tracking-tighter transition-all duration-300"
                     >
                         Update Information
                     </Link>

@@ -5,6 +5,10 @@ import { getAllTilesData } from "@/lib/data";
 import Link from 'next/link';
 import { useState, useEffect } from "react";
 
+export const metadata = {
+  title: "All Tile",
+};
+
 const AllTiles = () => {
   // const allTiles =  getAllTilesData();
   const [allTiles, setAllTiles] = useState([]);

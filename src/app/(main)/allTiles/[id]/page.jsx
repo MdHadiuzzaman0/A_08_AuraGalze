@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { MdArrowRight } from "react-icons/md";
 import 'animate.css';
 
+export const generateMetadata = async ({ params }) => {
+    const { id } = await params;
+    const tile = await getSingleTilesData(id);
+    return { title:tile.title, }
+}
+
 const AllInfoAboutSingleTile = async ({ params }) => {
     const { id } = await params;
     const tile = await getSingleTilesData(id);

@@ -1,7 +1,8 @@
 <!-- Cover Image — export cover-preview.html as 1280×640 PNG and upload to GitHub, then replace the src below -->
 <div align="center">
-  <img width="1280" height="640" alt="AuraGlaze Cover" src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/public/cover.png" />
+
 </div>
+  <img width="1431" height="690" alt="Cover image of AuraGlaxe" src="https://github.com/user-attachments/assets/c135601d-9451-45c5-af14-db51a50c9565" />
 
 <div align="center">
 

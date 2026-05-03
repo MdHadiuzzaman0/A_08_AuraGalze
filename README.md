@@ -7,7 +7,7 @@
 
 <div align="center">
 
-  <h1>🏺 AuraGlaze — Premium Tile Collection</h1>
+  <h1>🏺 GlazeGrid — Premium Tile Collection</h1>
 
   <p><em>Where every surface tells a story — one tile at a time.</em></p>
 
@@ -23,7 +23,7 @@
 
 ## 📖 Overview
 
-**AuraGlaze** is a full-stack premium tile gallery web application built with **Next.js 15 App Router**. Users can browse handcrafted ceramic, porcelain, marble, and mosaic tiles, view detailed product information, and manage their profiles — all behind a secure authentication system.
+**GlazeGrid** is a full-stack premium tile gallery web application built with **Next.js 15 App Router**. Users can browse handcrafted ceramic, porcelain, marble, and mosaic tiles, view detailed product information, and manage their profiles — all behind a secure authentication system.
 
 This project focuses on **Next.js server components, BetterAuth authentication, MongoDB integration, private route protection via middleware, and a polished responsive UI**.
 
@@ -31,7 +31,7 @@ This project focuses on **Next.js server components, BetterAuth authentication, 
 
 ## 🔗 Live Site
 
-👉 **https://YOUR-LIVE-URL.vercel.app**
+👉 **https://a-08-galze-haus.vercel.app/**
 
 <hr/>
 

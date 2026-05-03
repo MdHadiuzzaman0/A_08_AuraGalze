@@ -2,11 +2,12 @@
 <div align="center">
 
 </div>
-  <img width="1431" height="690" alt="Cover image of AuraGlaxe" src="https://github.com/user-attachments/assets/c135601d-9451-45c5-af14-db51a50c9565" />
+  <img width="1326" height="626" alt="Animation-ezgif com-cut" src="https://github.com/user-attachments/assets/a70a2106-9007-4226-933e-bbf5a2c983e5" />
+
 
 <div align="center">
 
-  <h1>🏺 AuraGlaze — Premium Tile Gallery</h1>
+  <h1>🏺 AuraGlaze — Premium Tile Collection</h1>
 
   <p><em>Where every surface tells a story — one tile at a time.</em></p>
 

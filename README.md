@@ -66,15 +66,17 @@ This project focuses on **Next.js server components, BetterAuth authentication, 
 <hr/>
 
 ## ⚙️ Core Implementation Concepts
- 
-- **Next.js App Router & Server Components:** Pages like Home, Tile Detail, and My Profile are fully server-rendered — data is fetched on the server before the page loads, improving performance and SEO.
-- **BetterAuth Server-Side Session:** Instead of client-side `useSession()`, `auth.api.getSession({ headers })` is used in Server Components (Navbar, My Profile) to securely read the session without exposing it to the client.
-- **Middleware Route Protection:** A `middleware.js` file intercepts requests to `/allTiles/:path+` and `/myProfile` — if no valid session exists, the user is immediately redirected to `/login` before the page even renders.
-- **Google OAuth + Email/Password:** BetterAuth handles both social login (Google) and traditional email/password auth through a single unified config in `auth.js`, with a MongoDB adapter storing users and sessions.
-- **React Hook Form Validation:** Login, Register, and Update Profile pages use `react-hook-form` for efficient, performant form handling with field-level validation (regex patterns, minLength, custom rules).
-- **Client vs Server Component Split:** Interactive pieces (`Search`, `LogoutButtonInNavbar`, `Navlink`, `ScrollToTopInFooter`) are `"use client"` components, while data-fetching pages stay as Server Components — keeping the bundle lean.
-- **Live Search without API calls:** The All Tiles page fetches all data once on mount, then filters purely on the client with `Array.filter()` — fast, instant results with no extra network requests.
-- **Animate.css Integration:** Hero banner and Marquee use `animate__animated` classes for entrance animations, satisfying the npm library requirement cleanly without JavaScript overhead.
+  
+| Concept | Details |
+|---------|---------|
+| 🖥️ **Next.js App Router & Server Components** | Pages like Home, Tile Detail, and My Profile are fully server-rendered — data is fetched on the server before the page loads, improving performance and SEO |
+| 🔐 **BetterAuth Server-Side Session** | Instead of client-side `useSession()`, `auth.api.getSession({ headers })` is used in Server Components (Navbar, My Profile) to securely read the session without exposing it to the client |
+| 🛡️ **Middleware Route Protection** | A `middleware.js` file intercepts requests to `/allTiles/:path+` and `/myProfile` — if no valid session exists, the user is immediately redirected to `/login` before the page even renders |
+| 🌐 **Google OAuth + Email/Password** | BetterAuth handles both social login (Google) and traditional email/password auth through a single unified config in `auth.js`, with a MongoDB adapter storing users and sessions |
+| 📝 **React Hook Form Validation** | Login, Register, and Update Profile pages use `react-hook-form` for efficient, performant form handling with field-level validation (regex patterns, minLength, custom rules) |
+| ⚡ **Client vs Server Component Split** | Interactive pieces (`Search`, `LogoutButtonInNavbar`, `Navlink`, `ScrollToTopInFooter`) are `"use client"` components, while data-fetching pages stay as Server Components — keeping the bundle lean |
+| 🔍 **Live Search without API calls** | The All Tiles page fetches all data once on mount, then filters purely on the client with `Array.filter()` — fast, instant results with no extra network requests |
+| 🎨 **Animate.css Integration** | Hero banner and Marquee use `animate__animated` classes for entrance animations, satisfying the npm library requirement cleanly without JavaScript overhead |
 <hr/>
 
 ## 📁 Project Structure

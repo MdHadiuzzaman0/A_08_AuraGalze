@@ -80,8 +80,8 @@ const AllInfoAboutSingleTile = async ({ params }) => {
                 </div>
             </div>
 
-            <Link href="/allTiles" className="text-md rounded-2xl font-bold hover:underline w-3/12 flex justify-self-center bg-amber-400 btn mt-15">
-                Back to All Section
+            <Link href="/allTiles" className="text-md rounded-2xl font-bold hover:bg-amber-500 w-3/12 flex justify-self-center bg-amber-400 btn mt-15">
+                Back 
             </Link>
         </div>
     );

@@ -19,21 +19,21 @@ const Login = () => {
             return;
         }
         else {
-            
+
             toast.success("Login is done")
         }
     }
 
     const requestGoogleAccess = async () => {
-            const data = await authClient.signIn.social({
-                provider: "google",
-                callbackURL: "/",
-            });
-        }
+        const data = await authClient.signIn.social({
+            provider: "google",
+            callbackURL: "/",
+        });
+    }
 
     return (
         <div>
-            <form onSubmit={handleSubmit(login)} className="fieldset bg-base-200 border-base-300 rounded-box w-6/12 mx-auto mt-19 border p-4">
+            <form onSubmit={handleSubmit(login)} className="fieldset bg-base-200 border-base-300 rounded-box w-full max-w-[350px] md:max-w-[500px] lg:max-w-[600px] mx-auto mt-20 border p-6 shadow-lg transition-all duration-300">
                 <fieldset className="fieldset">
                     <label className="label">Email</label>
                     <input
@@ -75,7 +75,7 @@ const Login = () => {
                             },
                         })} />
                     {/* {checkPasswordValue.length == 0 ? "" : errors.password ? <p role="alert" className="text-red-400">{errors.password.message}</p> : <p className="text-green-400">Password is ok</p>} */}
-                    { errors.password &&  <p role="alert" className="text-red-400">{errors.password.message}</p>}
+                    {errors.password && <p role="alert" className="text-red-400">{errors.password.message}</p>}
                 </label>
 
                 <button className="btn btn-neutral mt-4" type="submit">Login</button>

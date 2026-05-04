@@ -66,7 +66,10 @@ const Navbar = async () => {
                                 <LogoutButtonInNavbar />
                             </div>
                         </>
-                        : <Link href="/login" className="btn">Login</Link>}
+                        : 
+                        <div className="flex gap-2">
+                            <Link href="/login" className="btn">Login</Link>
+                         <Link href="/register" className="btn">Register</Link> </div>}
 
                 </div>
             </div>

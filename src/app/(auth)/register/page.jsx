@@ -37,7 +37,7 @@ const Register = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(reg)} className="fieldset bg-base-200 border-base-300 rounded-box w-6/12 mx-auto mt-19 border p-4">
+            <form onSubmit={handleSubmit(reg)} className="fieldset bg-base-200 border-base-300 rounded-box w-full max-w-[350px] md:max-w-[500px] lg:max-w-[600px] mx-auto mt-20 border p-6 shadow-lg transition-all duration-300">
                 {/* Name Section */}
                 <fieldset className="fieldset">
                     <label className="label">Name</label>
